@@ -1,0 +1,32 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+  int n1,n2,i,*set1,*set2,g,k,l=0;
+     printf("enter the no of elements you want to insert in set1");
+    scanf("%d",&n1);
+ set1=malloc(n1* sizeof(int));
+printf("enter the elements of set1");
+          for(i=0;i<n1;i++)
+             scanf("%d",&set1[i]);
+     printf("enter the no of elements you want to insert in set2");
+     scanf("%d",&n2);
+set2=malloc(n2* sizeof(int));
+printf("enter the elements of set1");
+           for(i=0;i<n2;i++)
+		scanf("%d",&set2[i]);
+
+printf("The intersection of given set is : ");
+	for(k=0;k<n1;k++){
+	for(g=0;g<n2;g++){
+	     if(set1[k]==set2[g]){
+     		l++;
+printf("%d ",set1[k]);
+}
+	}
+}
+printf("\n");
+ printf("The cardinality of intersection of given sets is\n %d\n",l);
+ return 0;
+}
